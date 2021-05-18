@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Fetch from '../quotes/Fetch'
-import OneQuote from '../presentations/OneQuote'
+import Fetch from '../presentations/quotes/Fetch'
+import OneQuote from '../presentations/quotes/OneQuote'
 import { getSimpsonQuotes } from '../services/simpsonsApi'
 
 const SimpsonQuote = () => {
@@ -9,9 +9,8 @@ const SimpsonQuote = () => {
 
     const handleClick = async () => { 
         const quote = await getSimpsonQuotes();
-        console.log(quote);
+        
         setQuote(quote);
-
     }
     return (
         <div>
