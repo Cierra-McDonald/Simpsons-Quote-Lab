@@ -8,7 +8,7 @@ const OneQuote = ({ character, quote, image }) => {
             <div>
                 <figure className={styles.figure}>
                     <p>{character}</p>
-                    <img src={image} alt={character} height='500px'/>
+                    <img src={image} alt={character} height='350px'/>
                     <figcaption>{quote}</figcaption>
                 </figure>
             </div>
