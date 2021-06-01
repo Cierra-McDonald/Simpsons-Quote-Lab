@@ -2,15 +2,23 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './Presentations.css'
 
-const OneQuote = ({ character, quote, image }) => {
+const OneQuote = ({ character, quote, image, loading }) => {
 
         return (
             <div>
-                <figure className={styles.figure}>
+                {
+                    loading
+                    ?
+                    <h2 style={{textAlign: 'center'}}>Loading...</h2>
+                    :
+                    <div>
+                    <figure className={styles.figure}>
                     <p>{character}</p>
                     <img src={image} alt={character} height='350px'/>
                     <figcaption>{quote}</figcaption>
-                </figure>
+                    </figure>
+                    </div>
+                }
             </div>
         )
     
@@ -19,7 +27,8 @@ const OneQuote = ({ character, quote, image }) => {
 OneQuote.propTypes = {
     character: PropTypes.string.isRequired,
     quote: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired
+    image: PropTypes.string.isRequired,
+    loading: PropTypes.bool.isRequired
 };
 
 export default OneQuote;

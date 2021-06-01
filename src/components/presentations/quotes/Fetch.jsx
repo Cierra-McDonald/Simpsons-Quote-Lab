@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   }));
   
 
-const Fetch = ({ onClick }) => {
+const Fetch = ({ onClick, useEffect }) => {
         return (
             <div>
                 <img src={'https://fontmeme.com/permalink/210518/9cd150157065dcd310d88694e5f15698.png'} alt={"simpsons-font"} style={{border: '0', margin: '0 auto', display: "flex"}}/>
